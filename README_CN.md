@@ -159,16 +159,6 @@ page.wait_for_load_state('networkidle', timeout=30000)  # 30秒
 4. **网络稳定**：确保网络连接稳定，避免中断
 5. **浏览器版本**：确保 Chromium 浏览器驱动已正确安装
 
-## 关于 BrowserTools MCP
-
-虽然您安装了 BrowserTools MCP 插件，但该插件主要用于：
-- 调试和监控网页
-- 查看控制台日志
-- 捕获网络请求
-- 性能审计
-
-**它不支持自动化操作**（如点击、表单填写等），因此本项目使用 Playwright 来实现完整的自动化爬取功能。
-
 ## 技术栈
 
 - **Python 3.7+**
