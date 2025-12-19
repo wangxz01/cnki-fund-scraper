@@ -20,6 +20,19 @@
 
 ## 安装步骤
 
+### miniconda
+```bash
+Invoke-WebRequest -Uri https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Windows-x86_64.exe -OutFile miniconda_setup.exe; Start-Process .\miniconda_setup.exe
+
+
+conda init powershell
+
+conda create -n cnki_s python=3.10
+
+conda activate cnki_s
+```
+
+
 ### 1. 安装 Python 依赖
 
 ```bash
