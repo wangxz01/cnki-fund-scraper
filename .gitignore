@@ -45,3 +45,6 @@ Thumbs.db
 *.log
 
 # BrowserDriver
+
+# TraeAI
+.trae/

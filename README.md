@@ -17,6 +17,7 @@ An automated web scraping tool for collecting research funding project data from
 - 🔗 **URL Preservation** - Automatically save detail page URLs for traceability
 - 📅 **Date Recognition** - Intelligent recognition of multiple date formats
 - 🔄 **Auto Pagination** - Automatically navigate through all pages
+- 📝 **Direct URL Scraping** - Scrape projects directly from URLs in a text file
 - 💾 **Excel Export** - Export data to Excel format for easy analysis
 - ⚠️ **Error Handling** - Robust error handling and partial data saving
 
@@ -49,8 +50,16 @@ python -m playwright install chromium
 
 ### 4. Run the Scraper
 
+#### Option 1: Standard Scraping (From List Pages)
 ```bash
 python scraper.py
+```
+
+#### Option 2: Direct URL Scraping (From Text File)
+1. Create or edit `url.txt` file with project URLs (one per line)
+2. Run the direct scraper:
+```bash
+python scraper2.py
 ```
 
 ## 📖 Usage Guide
@@ -183,7 +192,9 @@ page.wait_for_load_state('networkidle', timeout=30000)  # 30 seconds
 
 ```
 cnki-fund-scraper/
-├── scraper.py          # Main scraper script
+├── scraper.py          # Main scraper script (from list pages)
+├── scraper2.py         # Direct URL scraper script (from url.txt)
+├── url.txt             # Project URLs for direct scraping
 ├── requirements.txt    # Python dependencies
 ├── README.md           # English documentation
 ├── README_CN.md        # Chinese documentation
